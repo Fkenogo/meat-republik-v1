@@ -128,3 +128,26 @@ local and remote heads are synchronized.
 
 Preparation does not imply approval. Constitutional remediation must not begin
 until the Founder records express dispositions and authorizes implementation.
+
+## Founder Acceptance of Preparation
+
+> **MR-G1-FDR-001 — Complete and accepted as Founder decision support.**
+>
+> The Gate G1 Founder Decision Pack is accepted as a complete, evidence-grounded and appropriately bounded package for Founder review.
+>
+> This acceptance applies only to the preparation, structure, traceability and completeness of the decision-support materials.
+>
+> No recommendation, decision option, proposed metadata value, classification, authority relationship, legacy disposition or Gate G1 outcome is approved through this acceptance.
+>
+> All seven Founder Decision Records remain unresolved until the Founder expressly records a disposition and rationale.
+>
+> Gate G1 remains open. Constitutional remediation is not authorized at this stage.
+
+Acceptance record:
+[MR-G1-FDR-001 Acceptance Record](MR-G1-FDR-001-Acceptance-Record.md)
+
+- Decision-pack preparation is closed.
+- FDR-G1-001 through FDR-G1-007 remain unresolved.
+- Gate G1 remains `Open — Pending Founder Dispositions`.
+- No constitutional remediation, governance-register implementation, or
+  legacy-file disposition authority has been granted.
