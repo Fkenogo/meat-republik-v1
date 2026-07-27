@@ -22,11 +22,19 @@ was changed.
 - **Latest implementation commit before reports:** `b6f7688`
 - **Report publication commit:** `a9a7f27`
 - **Report formatting correction:** `b801ebd`
-- **Pre-reconciliation tracked worktree:** clean
-- **Push status:** branch publication succeeded and upstream tracking is
-  configured at `origin/codex/mr-arch-001-eng-01`
+- **Verified sprint closure HEAD:** `d0958a6`
+- **Verified upstream HEAD:** `d0958a6`
+- **Remote divergence:** 0 ahead, 0 behind
+- **Worktree at closure verification:** clean
+- **Push status:** synchronized with
+  `origin/codex/mr-arch-001-eng-01`
+- **Validator at closure verification:** exit 0; PASS WITH CONDITIONS; 18/18
+  protected constitutional files passed
+- **Validation evidence freshness:** the tracked `validation-evidence.json` is
+  byte-for-byte identical to output generated from sprint closure HEAD
+  `d0958a6`
 
-Sprint commit history before final reconciliation:
+Sprint commit history through final reconciliation:
 
 | Commit | Summary |
 |---|---|
@@ -39,9 +47,7 @@ Sprint commit history before final reconciliation:
 | `b6f7688` | Protect complete constitutional baseline |
 | `a9a7f27` | Publish Gate G1 repository assurance reports |
 | `b801ebd` | Normalize assurance report formatting |
-
-This summary is included in the final reconciliation push. The final response
-records its exact commit and verifies remote synchronization.
+| `d0958a6` | Reconcile final sprint publication status |
 
 ## Validation Outcome
 
