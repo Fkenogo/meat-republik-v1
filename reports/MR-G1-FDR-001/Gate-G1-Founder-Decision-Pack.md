@@ -736,6 +736,15 @@ history. Faster, but governance activation remains partial.
 Preserves current state. Gate G1 should be deferred unless the Founder expressly
 accepts absence of operational governance as a named condition.
 
+### Analysis
+
+Authorizing all four registers produces the complete evidence system described
+by MR-GOV-001, but only after FDR-G1-004 and FDR-G1-005 settle their schema and
+authority. A REG/APR-first sequence offers earlier inventory and approval
+control, yet leaves version and amendment history incomplete. Deferral avoids
+premature register creation but cannot support unconditional governance
+activation.
+
 ### Recommended Option
 
 **Option A — Authorize all four after the metadata model and MR-GOV-001
