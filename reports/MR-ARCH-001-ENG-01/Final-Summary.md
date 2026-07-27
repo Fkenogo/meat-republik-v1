@@ -20,10 +20,13 @@ was changed.
 - **Branch:** `codex/mr-arch-001-eng-01`
 - **Baseline commit:** `0ecc355`
 - **Latest implementation commit before reports:** `b6f7688`
-- **Tracked worktree at report drafting:** clean before adding these reports
-- **Push status at report drafting:** not yet attempted
+- **Report publication commit:** `a9a7f27`
+- **Report formatting correction:** `b801ebd`
+- **Pre-reconciliation tracked worktree:** clean
+- **Push status:** branch publication succeeded and upstream tracking is
+  configured at `origin/codex/mr-arch-001-eng-01`
 
-Commit history before report publication:
+Sprint commit history before final reconciliation:
 
 | Commit | Summary |
 |---|---|
@@ -34,9 +37,11 @@ Commit history before report publication:
 | `3a6d2de` | Add constitutional repository validator |
 | `7266ea6` | Place Experience Constitution in governed domain |
 | `b6f7688` | Protect complete constitutional baseline |
+| `a9a7f27` | Publish Gate G1 repository assurance reports |
+| `b801ebd` | Normalize assurance report formatting |
 
-The final response and, if necessary, a reconciliation commit will record the
-actual report commit and remote push result.
+This summary is included in the final reconciliation push. The final response
+records its exact commit and verifies remote synchronization.
 
 ## Validation Outcome
 
