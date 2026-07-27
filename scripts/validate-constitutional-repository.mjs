@@ -70,6 +70,18 @@ const approvedArtefacts = [
   baselinePath: artefact.baselinePath ?? artefact.expectedPath,
 }));
 
+const supplementalProtectedFiles = [
+  "knowledge-repository/00-enterprise/founder-design/FCDP-001-Part-I-The-Nature-of-the-Republic.md",
+  "knowledge-repository/00-enterprise/founder-design/FCDP-001-Part-II-The-Republics-Human-Philosophy.md",
+  "knowledge-repository/00-enterprise/founder-design/FCDP-001-Part-III-Constitutional-Beliefs.md",
+  "knowledge-repository/00-enterprise/founder-design/FCDP-001-Part-IV-The-Communities-of-the-Republic.md",
+  "knowledge-repository/00-enterprise/founder-design/FCDP-001-Part-V-The-Republic-Experience.md",
+  "knowledge-repository/00-enterprise/founder-design/FCDP-001-Part-VI-The-Republic-Promise.md",
+  "knowledge-repository/00-enterprise/founder-design/FCDP-001-Part-VII-Custodianship-and-Culture.md",
+  "knowledge-repository/00-enterprise/founder-design/FCDP-001-Part-VIII-Institutions-and-Constitutional-Continuity.md",
+  "knowledge-repository/00-enterprise/founder-design/FCDP-001-Part-IX-The-Republics-Intended-Legacy.md",
+];
+
 const requestedMetadata = [
   "Document ID",
   "Title",
@@ -356,6 +368,34 @@ const artefactChecks = approvedArtefacts.map((artefact) => {
   };
 });
 
+const supplementalContentChecks = supplementalProtectedFiles.map((path) => {
+  const baseline = baselineBytes(path);
+  const current = existsSync(resolve(repositoryRoot, path))
+    ? readFileSync(resolve(repositoryRoot, path))
+    : null;
+  const baselineSha256 = sha256(baseline);
+  const currentSha256 = current ? sha256(current) : null;
+  const contentIntegrityPass =
+    currentSha256 !== null && currentSha256 === baselineSha256;
+
+  if (!contentIntegrityPass) {
+    blockers.push({
+      code: "SUPPLEMENTAL_CONTENT_INTEGRITY",
+      path,
+      baselineSha256,
+      currentSha256,
+    });
+  }
+
+  return {
+    constitutionalArtefact: "FCDP-001",
+    path,
+    baselineSha256,
+    currentSha256,
+    contentIntegrityPass,
+  };
+});
+
 const declaredPrimaryParents = Object.fromEntries(
   artefactChecks.map((check) => [
     check.id,
@@ -427,7 +467,12 @@ const evidence = {
   baselineCommit,
   scope: {
     approvedArtefactCount: approvedArtefacts.length,
-    legacyMarkdownCount: markdownPaths.length - approvedArtefacts.length,
+    protectedConstitutionalFileCount:
+      approvedArtefacts.length + supplementalProtectedFiles.length,
+    legacyMarkdownCount:
+      markdownPaths.length -
+      approvedArtefacts.length -
+      supplementalProtectedFiles.length,
   },
   summary: {
     blockingFailureCount: blockers.length,
@@ -437,6 +482,13 @@ const evidence = {
     contentIntegrityPassCount: artefactChecks.filter(
       (check) => check.contentIntegrityPass,
     ).length,
+    supplementalContentIntegrityPassCount: supplementalContentChecks.filter(
+      (check) => check.contentIntegrityPass,
+    ).length,
+    protectedContentIntegrityPassCount:
+      artefactChecks.filter((check) => check.contentIntegrityPass).length +
+      supplementalContentChecks.filter((check) => check.contentIntegrityPass)
+        .length,
     uniqueIdPassCount: artefactChecks.filter((check) => check.idUniquePass)
       .length,
     orphanPassCount: artefactChecks.filter((check) => check.orphanPass).length,
@@ -446,6 +498,7 @@ const evidence = {
   blockers,
   conditions,
   artefacts: artefactChecks,
+  supplementalContentChecks,
 };
 
 const serializedEvidence = `${JSON.stringify(evidence, null, 2)}\n`;

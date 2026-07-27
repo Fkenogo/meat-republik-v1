@@ -4,13 +4,16 @@
   "baselineCommit": "0ecc355",
   "scope": {
     "approvedArtefactCount": 9,
-    "legacyMarkdownCount": 25
+    "protectedConstitutionalFileCount": 18,
+    "legacyMarkdownCount": 16
   },
   "summary": {
     "blockingFailureCount": 0,
     "conditionCount": 4,
     "placementPassCount": 9,
     "contentIntegrityPassCount": 9,
+    "supplementalContentIntegrityPassCount": 9,
+    "protectedContentIntegrityPassCount": 18,
     "uniqueIdPassCount": 9,
     "orphanPassCount": 9,
     "missingMetadataFieldCount": 35,
@@ -429,6 +432,71 @@
       ],
       "unresolvedReferences": [],
       "orphanPass": true
+    }
+  ],
+  "supplementalContentChecks": [
+    {
+      "constitutionalArtefact": "FCDP-001",
+      "path": "knowledge-repository/00-enterprise/founder-design/FCDP-001-Part-I-The-Nature-of-the-Republic.md",
+      "baselineSha256": "cbd80e73234573851939d12c277ebe7663548b99bf701515b498d0a930348446",
+      "currentSha256": "cbd80e73234573851939d12c277ebe7663548b99bf701515b498d0a930348446",
+      "contentIntegrityPass": true
+    },
+    {
+      "constitutionalArtefact": "FCDP-001",
+      "path": "knowledge-repository/00-enterprise/founder-design/FCDP-001-Part-II-The-Republics-Human-Philosophy.md",
+      "baselineSha256": "9daf466606c125fd0fc63a762b4b3af87bd052ce718152f391eb2366b5970124",
+      "currentSha256": "9daf466606c125fd0fc63a762b4b3af87bd052ce718152f391eb2366b5970124",
+      "contentIntegrityPass": true
+    },
+    {
+      "constitutionalArtefact": "FCDP-001",
+      "path": "knowledge-repository/00-enterprise/founder-design/FCDP-001-Part-III-Constitutional-Beliefs.md",
+      "baselineSha256": "8680fd50a08c2cb05c64407ae58b71cd36f4cbc46b14703bcbf79125690517bf",
+      "currentSha256": "8680fd50a08c2cb05c64407ae58b71cd36f4cbc46b14703bcbf79125690517bf",
+      "contentIntegrityPass": true
+    },
+    {
+      "constitutionalArtefact": "FCDP-001",
+      "path": "knowledge-repository/00-enterprise/founder-design/FCDP-001-Part-IV-The-Communities-of-the-Republic.md",
+      "baselineSha256": "44be9b5681a9049f8cbe3c90c93c497e2c4c5e056fbd6975c2acc12015d3b62a",
+      "currentSha256": "44be9b5681a9049f8cbe3c90c93c497e2c4c5e056fbd6975c2acc12015d3b62a",
+      "contentIntegrityPass": true
+    },
+    {
+      "constitutionalArtefact": "FCDP-001",
+      "path": "knowledge-repository/00-enterprise/founder-design/FCDP-001-Part-V-The-Republic-Experience.md",
+      "baselineSha256": "bac219ae83760d7abb1f9545972c29421a8057e9e56fde3eb7781f8fa6250516",
+      "currentSha256": "bac219ae83760d7abb1f9545972c29421a8057e9e56fde3eb7781f8fa6250516",
+      "contentIntegrityPass": true
+    },
+    {
+      "constitutionalArtefact": "FCDP-001",
+      "path": "knowledge-repository/00-enterprise/founder-design/FCDP-001-Part-VI-The-Republic-Promise.md",
+      "baselineSha256": "84784c12898c1c7b58ae17761dd2a175151db74a0e7fc35396f87af468ee02e3",
+      "currentSha256": "84784c12898c1c7b58ae17761dd2a175151db74a0e7fc35396f87af468ee02e3",
+      "contentIntegrityPass": true
+    },
+    {
+      "constitutionalArtefact": "FCDP-001",
+      "path": "knowledge-repository/00-enterprise/founder-design/FCDP-001-Part-VII-Custodianship-and-Culture.md",
+      "baselineSha256": "b835004fc444fcb1499860af516a716d188dcc6ead9c263c119f9b9ffd2be502",
+      "currentSha256": "b835004fc444fcb1499860af516a716d188dcc6ead9c263c119f9b9ffd2be502",
+      "contentIntegrityPass": true
+    },
+    {
+      "constitutionalArtefact": "FCDP-001",
+      "path": "knowledge-repository/00-enterprise/founder-design/FCDP-001-Part-VIII-Institutions-and-Constitutional-Continuity.md",
+      "baselineSha256": "550636e4f55101184bad1ed9b715e79a892414588a18a502724554a9a2f994c2",
+      "currentSha256": "550636e4f55101184bad1ed9b715e79a892414588a18a502724554a9a2f994c2",
+      "contentIntegrityPass": true
+    },
+    {
+      "constitutionalArtefact": "FCDP-001",
+      "path": "knowledge-repository/00-enterprise/founder-design/FCDP-001-Part-IX-The-Republics-Intended-Legacy.md",
+      "baselineSha256": "8386d633550bcf82579e152460045a8d8c8facaceb673e19b1e62fea8a5f7ff0",
+      "currentSha256": "8386d633550bcf82579e152460045a8d8c8facaceb673e19b1e62fea8a5f7ff0",
+      "contentIntegrityPass": true
     }
   ]
 }
