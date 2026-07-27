@@ -1,7 +1,9 @@
 # Final Summary
 
-**Sprint:** MR-ARCH-001-ENG-01  
-**Date:** 2026-07-27  
+**Sprint:** MR-ARCH-001-ENG-01
+
+**Date:** 2026-07-27
+
 **Gate:** G1 — Constitutional Platform Readiness
 
 ## Repository Status

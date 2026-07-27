@@ -1,7 +1,9 @@
 # Constitutional Validation Report
 
-**Sprint:** MR-ARCH-001-ENG-01  
-**Date:** 2026-07-27  
+**Sprint:** MR-ARCH-001-ENG-01
+
+**Date:** 2026-07-27
+
 **Overall assessment:** PASS WITH CONDITIONS
 
 ## Assessment

@@ -1,8 +1,11 @@
 # Repository Engineering Report
 
-**Sprint:** MR-ARCH-001-ENG-01  
-**Date:** 2026-07-27  
-**Engineering approach:** Founder-approved preservation-first  
+**Sprint:** MR-ARCH-001-ENG-01
+
+**Date:** 2026-07-27
+
+**Engineering approach:** Founder-approved preservation-first
+
 **Constitutional content changes:** None
 
 ## Executive Result
