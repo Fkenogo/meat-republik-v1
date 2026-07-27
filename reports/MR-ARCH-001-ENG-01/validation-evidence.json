@@ -1,0 +1,434 @@
+{
+  "schemaVersion": 1,
+  "sprint": "MR-ARCH-001-ENG-01",
+  "baselineCommit": "0ecc355",
+  "scope": {
+    "approvedArtefactCount": 9,
+    "legacyMarkdownCount": 25
+  },
+  "summary": {
+    "blockingFailureCount": 0,
+    "conditionCount": 4,
+    "placementPassCount": 9,
+    "contentIntegrityPassCount": 9,
+    "uniqueIdPassCount": 9,
+    "orphanPassCount": 9,
+    "missingMetadataFieldCount": 35,
+    "outcome": "PASS_WITH_CONDITIONS"
+  },
+  "blockers": [],
+  "conditions": [
+    {
+      "code": "AUTHORITY_CHAIN_VARIANCE",
+      "disposition": "Founder decision required",
+      "statement": "The programme brief's linear enterprise authority chain is not declared exactly by current Parent Authority metadata.",
+      "variances": [
+        {
+          "id": "CDM-001",
+          "expectedParentFromBrief": "KR-001",
+          "declaredParent": "FCDP-001"
+        },
+        {
+          "id": "AUTH-001",
+          "expectedParentFromBrief": "CDM-001",
+          "declaredParent": "KR-001"
+        },
+        {
+          "id": "MR-GOV-001",
+          "expectedParentFromBrief": "AUTH-001",
+          "declaredParent": null
+        }
+      ]
+    },
+    {
+      "code": "CX_TERMINOLOGY_VARIANCE",
+      "disposition": "Founder decision required",
+      "statement": "CDM-001 names CX-001 as a Republic Experience Framework while CX-001 identifies itself as a Republic Experience Constitution.",
+      "observed": true
+    },
+    {
+      "code": "METADATA_OMISSIONS",
+      "disposition": "Standardisation requires Founder-approved values",
+      "statement": "Requested metadata fields are absent or use non-standard labels across the approved platform.",
+      "missingFieldCount": 35
+    },
+    {
+      "code": "LEGACY_ARCHITECTURE_VARIANCE",
+      "disposition": "Founder decision required before normalization",
+      "statement": "Legacy Founder working drafts define competing authority levels, identifiers, domain names, and folder mappings.",
+      "observedDocuments": [
+        "knowledge-repository/00-enterprise/MR-DP-000-REPUBLIC-DEVELOPMENT-ARCHITECTURE-v0.2.md",
+        "knowledge-repository/00-enterprise/MR-DP-002-REPOSITORY-AUTHORITY-AND-DOCUMENT-CLASSIFICATION-STANDARD-v0.1.md",
+        "knowledge-repository/00-enterprise/MR-EA-003-ENTERPRISE-DOMAIN-MAP-v0.1.md",
+        "knowledge-repository/00-enterprise/MR-EA-004-ENTERPRISE-TRACEABILITY-ARCHITECTURE-v0.1.md"
+      ]
+    }
+  ],
+  "artefacts": [
+    {
+      "id": "FCDP-001",
+      "expectedPath": "knowledge-repository/00-enterprise/founder-design/FCDP-001-CONSTITUTIONAL-BLUEPRINT-OF-THE-REPUBLIC.md",
+      "baselinePath": "knowledge-repository/00-enterprise/founder-design/FCDP-001-CONSTITUTIONAL-BLUEPRINT-OF-THE-REPUBLIC.md",
+      "locatedPaths": [
+        "knowledge-repository/00-enterprise/founder-design/FCDP-001-CONSTITUTIONAL-BLUEPRINT-OF-THE-REPUBLIC.md"
+      ],
+      "placementPass": true,
+      "baselineSha256": "f73dc64421e972da5c91517a3a2e6020108947ac469a61ff78378e3811b7c17e",
+      "currentSha256": "f73dc64421e972da5c91517a3a2e6020108947ac469a61ff78378e3811b7c17e",
+      "contentIntegrityPass": true,
+      "idDeclarationCount": 1,
+      "idUniquePass": true,
+      "metadata": {
+        "Document ID": "FCDP-001",
+        "Title": "The Constitutional Blueprint of the Republic",
+        "Version": "0.1",
+        "Status": "Founder Design Draft",
+        "Authority Level": null,
+        "Parent Authority": null,
+        "Derived From": null,
+        "Repository Domain": null,
+        "Document Family": null
+      },
+      "metadataLabelVariances": [
+        {
+          "requested": "Title",
+          "actual": "Document Title",
+          "value": "The Constitutional Blueprint of the Republic"
+        },
+        {
+          "requested": "Authority Level or derivation fields",
+          "actual": "Authority",
+          "value": "Founder Constitutional Design"
+        }
+      ],
+      "missingMetadata": [
+        "Authority Level",
+        "Repository Domain",
+        "Document Family"
+      ],
+      "upstreamApprovedReferences": [],
+      "unresolvedReferences": [],
+      "orphanPass": true
+    },
+    {
+      "id": "KR-001",
+      "expectedPath": "knowledge-repository/00-enterprise/constitution/KR-001-Knowledge-Repository-Constitution.md",
+      "baselinePath": "knowledge-repository/00-enterprise/constitution/KR-001-Knowledge-Repository-Constitution.md",
+      "locatedPaths": [
+        "knowledge-repository/00-enterprise/constitution/KR-001-Knowledge-Repository-Constitution.md"
+      ],
+      "placementPass": true,
+      "baselineSha256": "6c76f07b3a62839211c91ccc92fa9e43e5a644700fce669a4dd62c6b69f66bef",
+      "currentSha256": "6c76f07b3a62839211c91ccc92fa9e43e5a644700fce669a4dd62c6b69f66bef",
+      "contentIntegrityPass": true,
+      "idDeclarationCount": 1,
+      "idUniquePass": true,
+      "metadata": {
+        "Document ID": "KR-001",
+        "Title": "Knowledge Repository Constitution",
+        "Version": null,
+        "Status": "Draft --- Founder Design",
+        "Authority Level": "Constitutional Instrument",
+        "Parent Authority": "FCDP-001 --- Constitutional Blueprint of the Republic (pending Version 1.0)",
+        "Derived From": null,
+        "Repository Domain": null,
+        "Document Family": null
+      },
+      "metadataLabelVariances": [],
+      "missingMetadata": [
+        "Version",
+        "Derived From",
+        "Repository Domain",
+        "Document Family"
+      ],
+      "upstreamApprovedReferences": [
+        "FCDP-001"
+      ],
+      "unresolvedReferences": [],
+      "orphanPass": true
+    },
+    {
+      "id": "CDM-001",
+      "expectedPath": "knowledge-repository/00-enterprise/constitution/CDM-001-Constitutional-Derivation-Map.md",
+      "baselinePath": "knowledge-repository/00-enterprise/constitution/CDM-001-Constitutional-Derivation-Map.md",
+      "locatedPaths": [
+        "knowledge-repository/00-enterprise/constitution/CDM-001-Constitutional-Derivation-Map.md"
+      ],
+      "placementPass": true,
+      "baselineSha256": "63b57552cdc2f1bbb786b1f344845fdcd03f43ea293d6fc2720448dc9f68a17e",
+      "currentSha256": "63b57552cdc2f1bbb786b1f344845fdcd03f43ea293d6fc2720448dc9f68a17e",
+      "contentIntegrityPass": true,
+      "idDeclarationCount": 1,
+      "idUniquePass": true,
+      "metadata": {
+        "Document ID": "CDM-001",
+        "Title": "Constitutional Derivation Map",
+        "Version": null,
+        "Status": "Draft --- Founder Design",
+        "Authority Level": "Constitutional Architecture",
+        "Parent Authority": "FCDP-001 --- Constitutional Blueprint of the Republic (pending Version 1.0)",
+        "Derived From": null,
+        "Repository Domain": null,
+        "Document Family": null
+      },
+      "metadataLabelVariances": [],
+      "missingMetadata": [
+        "Version",
+        "Derived From",
+        "Repository Domain",
+        "Document Family"
+      ],
+      "upstreamApprovedReferences": [
+        "FCDP-001",
+        "KR-001"
+      ],
+      "unresolvedReferences": [],
+      "orphanPass": true
+    },
+    {
+      "id": "AUTH-001",
+      "expectedPath": "knowledge-repository/00-enterprise/constitution/AUTH-001-Repository-Authority-Hierarchy.md",
+      "baselinePath": "knowledge-repository/00-enterprise/constitution/AUTH-001-Repository-Authority-Hierarchy.md",
+      "locatedPaths": [
+        "knowledge-repository/00-enterprise/constitution/AUTH-001-Repository-Authority-Hierarchy.md"
+      ],
+      "placementPass": true,
+      "baselineSha256": "63ee6a9bc975ac966e0af95de0de2269ee68ae32dc65d81906ec4dacb59578b6",
+      "currentSha256": "63ee6a9bc975ac966e0af95de0de2269ee68ae32dc65d81906ec4dacb59578b6",
+      "contentIntegrityPass": true,
+      "idDeclarationCount": 1,
+      "idUniquePass": true,
+      "metadata": {
+        "Document ID": "AUTH-001",
+        "Title": "Repository Authority Hierarchy",
+        "Version": null,
+        "Status": "Draft --- Founder Design",
+        "Authority Level": "Constitutional Architecture",
+        "Parent Authority": "KR-001 --- Knowledge Repository Constitution",
+        "Derived From": null,
+        "Repository Domain": null,
+        "Document Family": null
+      },
+      "metadataLabelVariances": [],
+      "missingMetadata": [
+        "Version",
+        "Derived From",
+        "Repository Domain",
+        "Document Family"
+      ],
+      "upstreamApprovedReferences": [
+        "KR-001",
+        "CDM-001"
+      ],
+      "unresolvedReferences": [],
+      "orphanPass": true
+    },
+    {
+      "id": "MR-GOV-001",
+      "expectedPath": "knowledge-repository/00-enterprise/governance/MR-GOV-001-Constitutional-Governance-Foundation.md",
+      "baselinePath": "knowledge-repository/00-enterprise/governance/MR-GOV-001-Constitutional-Governance-Foundation.md",
+      "locatedPaths": [
+        "knowledge-repository/00-enterprise/governance/MR-GOV-001-Constitutional-Governance-Foundation.md"
+      ],
+      "placementPass": true,
+      "baselineSha256": "10f75127f2a25ba8c8fd6111cf4a932efe7f3ff674b7775169d922f3b89698cd",
+      "currentSha256": "10f75127f2a25ba8c8fd6111cf4a932efe7f3ff674b7775169d922f3b89698cd",
+      "contentIntegrityPass": true,
+      "idDeclarationCount": 1,
+      "idUniquePass": true,
+      "metadata": {
+        "Document ID": "MR-GOV-001",
+        "Title": "Constitutional Governance Foundation",
+        "Version": null,
+        "Status": "Draft --- Founder Design",
+        "Authority Level": null,
+        "Parent Authority": null,
+        "Derived From": null,
+        "Repository Domain": null,
+        "Document Family": null
+      },
+      "metadataLabelVariances": [
+        {
+          "requested": "Document ID",
+          "actual": "Programme ID",
+          "value": "MR-GOV-001"
+        },
+        {
+          "requested": "Authority Level or derivation fields",
+          "actual": "Authority",
+          "value": "Derived from FCDP-001, KR-001, CDM-001 and AUTH-001"
+        }
+      ],
+      "missingMetadata": [
+        "Version",
+        "Authority Level",
+        "Parent Authority",
+        "Derived From",
+        "Repository Domain",
+        "Document Family"
+      ],
+      "upstreamApprovedReferences": [
+        "FCDP-001",
+        "KR-001",
+        "CDM-001",
+        "AUTH-001"
+      ],
+      "unresolvedReferences": [],
+      "orphanPass": true
+    },
+    {
+      "id": "BC-001",
+      "expectedPath": "knowledge-repository/02-brand/constitution/BC-001-Brand-Constitution.md",
+      "baselinePath": "knowledge-repository/02-brand/constitution/BC-001-Brand-Constitution.md",
+      "locatedPaths": [
+        "knowledge-repository/02-brand/constitution/BC-001-Brand-Constitution.md"
+      ],
+      "placementPass": true,
+      "baselineSha256": "92371fc3de02eea5999210e9f5435a7735676d7f3d2ebd5827edbd70424de678",
+      "currentSha256": "92371fc3de02eea5999210e9f5435a7735676d7f3d2ebd5827edbd70424de678",
+      "contentIntegrityPass": true,
+      "idDeclarationCount": 1,
+      "idUniquePass": true,
+      "metadata": {
+        "Document ID": "BC-001",
+        "Title": "Brand Constitution",
+        "Version": null,
+        "Status": "Draft --- Founder Design",
+        "Authority Level": "Constitutional Framework (B1)",
+        "Parent Authority": "FCDP-001 --- Constitutional Blueprint of the Republic",
+        "Derived From": null,
+        "Repository Domain": null,
+        "Document Family": null
+      },
+      "metadataLabelVariances": [],
+      "missingMetadata": [
+        "Version",
+        "Derived From",
+        "Repository Domain",
+        "Document Family"
+      ],
+      "upstreamApprovedReferences": [
+        "FCDP-001",
+        "KR-001",
+        "CDM-001",
+        "AUTH-001"
+      ],
+      "unresolvedReferences": [],
+      "orphanPass": true
+    },
+    {
+      "id": "BF-001",
+      "expectedPath": "knowledge-repository/02-brand/frameworks/BF-001-Brand-Architecture-Framework.md",
+      "baselinePath": "knowledge-repository/02-brand/frameworks/BF-001-Brand-Architecture-Framework.md",
+      "locatedPaths": [
+        "knowledge-repository/02-brand/frameworks/BF-001-Brand-Architecture-Framework.md"
+      ],
+      "placementPass": true,
+      "baselineSha256": "1548b136a3177e6a9971209aae52b8321beab91498d26afd5e4f9513f59ecf6d",
+      "currentSha256": "1548b136a3177e6a9971209aae52b8321beab91498d26afd5e4f9513f59ecf6d",
+      "contentIntegrityPass": true,
+      "idDeclarationCount": 1,
+      "idUniquePass": true,
+      "metadata": {
+        "Document ID": "BF-001",
+        "Title": "Brand Architecture Framework",
+        "Version": null,
+        "Status": "Draft --- Founder Design",
+        "Authority Level": "Constitutional Framework (B1)",
+        "Parent Authority": "BC-001 --- Brand Constitution",
+        "Derived From": "FCDP-001 --- Constitutional Blueprint of the Republic",
+        "Repository Domain": null,
+        "Document Family": null
+      },
+      "metadataLabelVariances": [],
+      "missingMetadata": [
+        "Version",
+        "Repository Domain",
+        "Document Family"
+      ],
+      "upstreamApprovedReferences": [
+        "BC-001",
+        "FCDP-001"
+      ],
+      "unresolvedReferences": [],
+      "orphanPass": true
+    },
+    {
+      "id": "BE-001",
+      "expectedPath": "knowledge-repository/02-brand/frameworks/BE-001-Brand-Expression-Framework.md",
+      "baselinePath": "knowledge-repository/02-brand/frameworks/BE-001-Brand-Expression-Framework.md",
+      "locatedPaths": [
+        "knowledge-repository/02-brand/frameworks/BE-001-Brand-Expression-Framework.md"
+      ],
+      "placementPass": true,
+      "baselineSha256": "36e69865cd4c073e0afa59f64383a7a912cb27544b7c4ec5b889d72a1a7a7535",
+      "currentSha256": "36e69865cd4c073e0afa59f64383a7a912cb27544b7c4ec5b889d72a1a7a7535",
+      "contentIntegrityPass": true,
+      "idDeclarationCount": 1,
+      "idUniquePass": true,
+      "metadata": {
+        "Document ID": "BE-001",
+        "Title": "Brand Expression Framework",
+        "Version": null,
+        "Status": "Draft --- Founder Design",
+        "Authority Level": "Constitutional Framework (B1)",
+        "Parent Authority": "BF-001 --- Brand Architecture Framework",
+        "Derived From": "BC-001 --- Brand Constitution, FCDP-001 --- Constitutional Blueprint of the Republic",
+        "Repository Domain": null,
+        "Document Family": null
+      },
+      "metadataLabelVariances": [],
+      "missingMetadata": [
+        "Version",
+        "Repository Domain",
+        "Document Family"
+      ],
+      "upstreamApprovedReferences": [
+        "BF-001",
+        "BC-001",
+        "FCDP-001"
+      ],
+      "unresolvedReferences": [],
+      "orphanPass": true
+    },
+    {
+      "id": "CX-001",
+      "expectedPath": "knowledge-repository/03-experience/constitution/CX-001-Republic-Experience-Constitution.md",
+      "baselinePath": "knowledge-repository/02-brand/constitution/CX-001-Republic-Experience-Constitution.md",
+      "locatedPaths": [
+        "knowledge-repository/03-experience/constitution/CX-001-Republic-Experience-Constitution.md"
+      ],
+      "placementPass": true,
+      "baselineSha256": "fce526e1a0ffeceaa0a49d7318d13c9e2068a80fea097812bb9293b7a9421bbf",
+      "currentSha256": "fce526e1a0ffeceaa0a49d7318d13c9e2068a80fea097812bb9293b7a9421bbf",
+      "contentIntegrityPass": true,
+      "idDeclarationCount": 1,
+      "idUniquePass": true,
+      "metadata": {
+        "Document ID": "CX-001",
+        "Title": "Republic Experience Constitution",
+        "Version": null,
+        "Status": "Draft --- Founder Design",
+        "Authority Level": "Constitutional Framework (B1)",
+        "Parent Authority": "FCDP-001 --- Constitutional Blueprint of the Republic",
+        "Derived From": null,
+        "Repository Domain": null,
+        "Document Family": null
+      },
+      "metadataLabelVariances": [],
+      "missingMetadata": [
+        "Version",
+        "Derived From",
+        "Repository Domain",
+        "Document Family"
+      ],
+      "upstreamApprovedReferences": [
+        "FCDP-001",
+        "BC-001",
+        "BE-001"
+      ],
+      "unresolvedReferences": [],
+      "orphanPass": true
+    }
+  ]
+}
